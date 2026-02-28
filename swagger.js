@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:8000/api/v1",
+        url: "https://souq.up.railway.app/api/v1",
       },
     ],
   },
