@@ -43,6 +43,9 @@ app.use("/api/v1/auth", authRoutes);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+app.get("/", (req, res) => {
+  res.redirect("/api-docs");
+});
 app.use((req, res, next) => {
   console.log("Incoming URL not matched:", req.originalUrl);
   next(new ApiError(`Can't find ${req.originalUrl} on this server`, 404));
